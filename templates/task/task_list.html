@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="title-box">
+    <h1 class="section-title">Todo List</h1>
+    <a href="{% url 'task:task-create' %}" class="add-btn">Add Todo</a>
+  </div>
+  {% if task_list %}
+    <ul class="task-list">
+      {% for task in task_list %}
+        <li class="task-item">
+          <h2 class="task-info task-title">
+            {{ task.content }}
+            {% if task.is_done %}
+              <span style="color:green">Done</span>
+              {% else %}
+              <span style="color:red">Not done</span>
+            {% endif %}
+          </h2>
+          <p class="task-info">Created: {{ task.created_at }}</p>
+          <p class="task-info">Deadline: {{ task.deadline }}</p>
+          <p class="task-info">Tags: 
+            {% for tag in task.tags.all %}
+              {{ tag.name }}
+            {% endfor %}
+          </p>
+          <div class="task-options">
+            <a href="{% url 'task:task-update' pk=task.id %}" class="task-btn update-btn">Update</a>
+            <a href="{% url 'task:task-delete' pk=task.id %}" class="task-btn delete-btn">Delete</a>
+          </div>
+          {% if task.is_done %}
+            <a href="{% url 'task:task-undo' pk=task.id %}" class="task-btn-state undo">Undo</a>
+            {% else %}
+            <a href="{% url 'task:task-complete' pk=task.id %}" class="task-btn-state complete">Complete</a>
+          {% endif %}
+        </li>
+      {% endfor %}  
+    </ul>
+    {% else %}
+    <p class="announcement">You don't have any tasks!</p>
+  {% endif %}
+{% endblock %}

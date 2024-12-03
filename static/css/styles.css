@@ -1,0 +1,206 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+a {
+    display: block;
+    color: inherit;
+}
+
+.wrapper {
+    padding: 20px 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 25% auto;
+}
+
+.nav {
+   padding: 20px 100px;
+}
+
+.nav-link {
+    font-size: 22px;
+    padding: 20px;
+    color: darkgray;
+}
+
+.nav-link.user {
+    color: green
+}
+
+.nav-link.login {
+    color: green
+}
+
+.nav-link.logout {
+    color: red;
+}
+
+.nav-link:not(:first-child) {
+    margin-top: 20px;
+}
+
+.title-box {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.add-btn {
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    border-color:transparent;
+    margin-left: 150px;
+}
+
+.task-list{
+    padding: 50px;
+}
+
+.task-item {
+    position: relative;
+}
+
+.task-item:not(:first-child) {
+    margin-top: 20px;
+}
+
+.task-info.task-title {
+    color: darkgray;
+}
+
+.task-info:not(:first-child) {
+    margin-top: 15px;
+}
+
+.task-btn {
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+.task-btn.delete-btn{
+    margin-left:30px;
+}
+
+.task-options {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.task-btn-state{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    padding: 15px;
+    border-radius: 10px;
+    border-color:transparent;
+    color: #ffffff;
+}
+
+.undo{
+    background-color: darkgray;
+}
+
+.complete{
+    background-color: green;
+}
+
+.tags-container {
+    padding: 60px;
+}
+
+.tag-upd{
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    background-color: darkgray;
+}
+
+.tag-del{
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    background-color: red;
+}
+
+.submit {
+    display: block;
+    background-color: green;
+    color:#ffffff;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color:transparent;
+}
+
+form p {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tag-create-link {
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    border-color:transparent;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}
