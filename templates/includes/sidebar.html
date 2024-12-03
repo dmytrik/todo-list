@@ -1,14 +1,14 @@
 <nav class="nav">
-  <a href="{% url "task:task-list" %}" class="nav-link">
+  <a href="{% url 'task:task-list' %}" class="nav-link">
     Home
   </a>
-  <a href="{% url "task:tag-list" %}" class="nav-link">
+  <a href="{% url 'task:tag-list' %}" class="nav-link">
     Tags
   </a>
   {% if user.is_authenticated %}
     <p class="nav-link user">User: {{ user.get_username }}</p>
-    <a href="{% url "accounts:logout" %}" class="nav-link logout">Logout</a></li>
+    <a href="{% url 'accounts:logout' %}" class="nav-link logout">Logout</a></li>
   {% else %}
-    <a href="{% url "accounts:login" %}" class="nav-link login">Login</a>
+    <a href="{% url 'accounts:login' %}" class="nav-link login">Login</a>
   {% endif %}
 </nav>

@@ -5,7 +5,7 @@
   <form action="" method="post">
     {% csrf_token %}
 
-    <input type="submit" value="Yes" class="btn btn-danger">
+    <input type="submit" value="Yes" class="submit" style="background-color: red">
   </form>
-  <a href="{% url "task:tag-list" %}">Go back</a>
+  <a href="{% url 'task:tag-list' %}" style="margin-top: 10px">Go back</a>
 {% endblock %}
